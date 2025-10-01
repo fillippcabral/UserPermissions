@@ -32,7 +32,7 @@ jobs:
 
       # 5. Run tests
       - name: Run tests
-        run: dotnet test ./UserPermissionsApi.Tests/UserPermissions.Tests.csproj --no-build --verbosity normal
+        run: dotnet test ./UserPermissions.Tests/UserPermissions.Tests.csproj --configuration Release --no-build --logger "trx;LogFileName=test_results.trx"
 
       # 6. Publish (creates self-contained binaries)
       - name: Publish project
