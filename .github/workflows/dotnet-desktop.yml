@@ -1,0 +1,50 @@
+name: Build and Deploy .NET Project
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Checkout repository
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # 2. Setup .NET (adjust version to match your project, e.g. 9.0.x)
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '9.0.x'
+
+      # 3. Restore dependencies
+      - name: Restore dependencies
+        run: dotnet restore ./UserPermissions/UserPermissions.csproj
+
+      # 4. Build
+      - name: Build project
+        run: dotnet build ./UserPermissions/UserPermissions.csproj --configuration Release --no-restore
+
+      # 5. Run tests
+      - name: Run tests
+        run: dotnet test ./UserPermissions.Tests/UserPermissions.Tests.csproj --no-build --verbosity normal
+
+      # 6. Publish (creates self-contained binaries)
+      - name: Publish project
+        run: dotnet publish ./UserPermissions/UserPermissions.csproj -c Release -o publish_output
+
+      # 7. Zip artifact
+      - name: Zip published files
+        run: zip -r userpermissions.zip publish_output
+
+      # 8. Upload artifact to GitHub Actions (optional)
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: userpermissions-package
+          path: userpermissions.zip
