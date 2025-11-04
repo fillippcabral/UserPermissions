@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PublishedItem>
+  <Title>Document for Publication &gt; Best Report Yet!!</Title>
+  <Countries>
+    <Country>US</Country>
+  </Countries>
+  <PublishedDate>2024-08-26T18:19:59.0000000Z</PublishedDate>
+  <ContactInformation>
+    <PersonGroup sequence="1">
+      <Name>Media Contact</Name>
+      <PersonGroupMember>
+        <Person>
+          <FamilyName>Johnsen</FamilyName>
+          <GivenName>Mike</GivenName>
+          <DisplayName>Mike Johnsen</DisplayName>
+          <JobTitle>Director of Communications &amp; Marketing</JobTitle>
+          <ContactInfo>
+            <Phone>
+              <Number>1-646-731-1347</Number>
+            </Phone>
+            <Email>mike.johnsen@kbra.com</Email>
+          </ContactInfo>
+          <Accreditation>CM&amp;AA</Accreditation>
+        </Person>
+      </PersonGroupMember>
+    </PersonGroup>
+  </ContactInformation>
+</PublishedItem>

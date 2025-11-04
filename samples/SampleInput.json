@@ -1,0 +1,38 @@
+{
+  "Id": "TCnWpDVD",
+  "ReportMetadata": {
+    "Title": "Document for Publication > Best Report Yet!!",
+    "ContactSection": [
+      {
+        "ContactInformation": [
+          {
+            "ContactHeader": "Media Contact",
+            "Contacts": [
+              {
+                "FirstName": "Mike",
+                "LastName": "Johnsen",
+                "Email": "mike.johnsen@kbra.com",
+                "Title": "Director of Communications & Marketing",
+                "PhoneNumber": "+1 646-731-1347",
+                "Accreditation": "CM&AA"
+              },
+              {
+                "FirstName": "",
+                "LastName": "",
+                "Email": "",
+                "Title": "",
+                "PhoneNumber": "",
+                "Accreditation": ""
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "CountryIds": ["US"],
+  "Title": "Document for Publication > Best Report Yet!!",
+  "PublishDate": "2024-08-26T18:19:59Z",
+  "Status": 3,
+  "TestRun": true
+}
